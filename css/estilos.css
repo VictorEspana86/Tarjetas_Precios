@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: #cbe4f1b2;
+    overflow-x: hidden;
+}
+
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    display: grid;
+   
+	grid-auto-columns: 300px;
+	grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.card{
+    width: 300px;
+    transition: all 300ms;
+}
+
+.card:hover{
+    width: 350px;
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img__back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.card:nth-of-type(1) .img__back{
+    background-image: url(../images/bg1.jpg);
+}
+
+.card:nth-of-type(2) .img__back{
+    background-image: url(../images/bg2.jpg);
+}
+
+.card:nth-of-type(3) .img__back{
+    background-image: url(../images/bg3.jpg);
+}
+.card:nth-of-type(4) .img__back{
+    background-image: url(../images/bg1.jpg);
+}
+
+.card:nth-of-type(5) .img__back{
+    background-image: url(../images/bg2.jpg);
+}
+
+.card:nth-of-type(6) .img__back{
+    background-image: url(../images/bg3.jpg);
+}
+.card:nth-of-type(7) .img__back{
+    background-image: url(../images/bg1.jpg);
+}
+.card:nth-of-type(8) .img__back{
+    background-image: url(../images/bg2.jpg);
+}
+
+.card:nth-of-type(9) .img__back{
+    background-image: url(../images/bg3.jpg);
+}
+
+.card:hover .img__back{
+    bottom: -40px;
+}
+
+.card .description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+.description{
+    text-align: center;
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+}
+
+.card .description p{
+    margin-top: 10px;
+}
+
+.card .description input{
+    padding: 10px 5px;
+    margin-top: 20px;
+    border: none;
+    background: #A6359D;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card .description input:hover{
+    background: #83277b;
+}
+
+.btn-neon, .btn-agregar, .btn-crearNuevo {
+	position: relative;
+	display: inline-block;
+	padding: 25px 30px;
+	color: #fff;
+	letter-spacing: 4px;
+	font-size: 18px;
+	text-decoration: none;
+	overflow: hidden;
+	transition: 0.2s;
+	background-color: rgba(111, 4, 173, 0.281);
+    cursor: pointer;
+    border-radius: 8px;
+    top: 15px;
+    border: 0;
+}
+
+.btn-agregar{
+    background-color: #4fa7ddd8;
+    margin-bottom: 10%;
+}
+
+.btn-agregar:hover{
+    background: #2b7caee2;
+	text-shadow: 0 0 10px #0d4f78e2, 0 0 40px #0d4f78e2, 0 0 80px #0d4f78e2;
+    width: 25%;
+	transition-delay: 0.001s;
+	font-weight: bold;
+    /*padding: 30px 35px;*/
+    font-size: 20px;
+}
+
+.btn-crearNuevo{
+    background-color: #4fa7ddd8 !important;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    width: 20%;
+    font-weight: bold;
+}
+
+.btn-crearNuevo:hover{
+    background: #2b7caee2;
+	text-shadow: 0 0 10px #0d4f78e2, 0 0 40px #0d4f78e2, 0 0 80px #0d4f78e2;
+    width: 23%;
+	transition-delay: 0.06s;
+	font-weight: bold;
+    /*padding: 30px 35px;*/
+    font-size: 25px;
+}
+
+.btn-neon:hover {
+	background: #4a035fee;
+	text-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    width: 100%;
+	transition-delay: 1s;
+	font-weight: bold;
+    /*padding: 30px 35px;*/
+    font-size: 20px;
+}
+.btn-neon span{
+	position: absolute;
+	display: block;
+}
+#span1{
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#a945c7);
+}
+.btn-neon:hover #span1{
+	left: 100%;
+	transition: 1s;
+}
+
+#span3{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#a945c7);
+}
+.btn-neon:hover #span3{
+	right:  100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+
+#span2{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#a945c7);
+}
+.btn-neon:hover #span2{
+	top:  100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+
+#span4{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#a945c7);
+}
+.btn-neon:hover #span4{
+	bottom:  100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+}
+
+.cantidad{
+    font-size: 20px; 
+    text-align: center; 
+    width: 50%;
+}
+
+.monto{
+    background: none !important; 
+    color: black !important; 
+    font-weight: bold !important; 
+    font-size: 40px !important; 
+    text-align: center !important; 
+    width: 85% !important;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    opacity: 0.95;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 20px;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+  }
+
+  .modal-content > input, textarea{
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .modal-content > button{
+    background-color: #83277b;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .nuevo {
+   margin-top: 10px;
+   text-align: center;
+  }

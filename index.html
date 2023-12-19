@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Precios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funciones.js"></script>
+</head>
+<body>
+
+    <div class="container__cards">
+
+        <div class="card" id="1">
+            <div class="cover">
+                <img src="images/1.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="articulo">Mouse Gamer</h2>
+                <h2 class="marca">Red Dragon</h2>
+                <p>Muy buen producto de excelente calidad y precio. Facil y comodo al momento de usarlo</p>
+                <div class="precio">
+					<input type="text" class="monto" id="monto-1" disabled value="$800" precio="$800">
+					<input type="number" class="cantidad" id="cantidad-1" value="1" min="1" onchange="nuevoMonto(1)">
+				</div>
+                <button class="btn-neon" onclick="quitarProducto(1)"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+                    <span id="span4"></span>Agregar al carro</button>
+            </div>
+        </div>
+
+        <div class="card" id="2">
+            <div class="cover">
+                <img src="images/2.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="articulo">Teclado Gamer</h2>
+                <h2 class="marca">Red Dragon</h2>
+                <p>Muy buen producto de excelente calidad y precio. Facil y comodo al momento de usarlo</p>
+                <div class="precio">
+					<input type="text" class="monto" id="monto-2" disabled value="$1500" precio="$1500">
+					<input type="number" class="cantidad" id="cantidad-2" value="1" min="1" onchange="nuevoMonto(2)">
+				</div>
+                <button class="btn-neon" onclick="quitarProducto(2)"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+                    <span id="span4"></span>Agregar al carro</button>
+            </div>
+        </div>
+
+        <div class="card" id="3">
+            <div class="cover">
+                <img src="images/3.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="articulo">Teclado Inalámbrico</h2>
+                <h2 class="marca">HP</h2>
+                <p>Muy buen producto de excelente calidad y precio. Facil y comodo al momento de usarlo</p>
+                <div class="precio">
+					<input type="text" class="monto" id="monto-3" disabled value="$750" precio="$750">
+					<input type="number" class="cantidad" id="cantidad-3" value="1" min="1" onchange="nuevoMonto(3)">
+				</div>
+                <button class="btn-neon" onclick="quitarProducto(3)"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+                    <span id="span4"></span>Agregar al carro</button>
+            </div>
+        </div>
+
+        <div class="card" id="4">
+            <div class="cover">
+                <img src="images/4.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="articulo">Super Combo Gamer</h2>
+                <h2 class="marca">Red Dragon</h2>
+                <p>Muy buen producto de excelente calidad y precio. Facil y comodo al momento de usarlo</p>
+                <div class="precio">
+					<input type="text" class="monto" id="monto-4" disabled value="$28500" precio="$28500">
+					<input type="number" class="cantidad" id="cantidad-4" value="1" min="1" onchange="nuevoMonto(4)">
+				</div>
+                <button class="btn-neon" onclick="quitarProducto(4)"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+                    <span id="span4"></span>Agregar al carro</button>
+            </div>
+        </div>
+
+        <div class="card" id="5">
+            <div class="cover">
+                <img src="images/5.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="articulo">Mouse</h2>
+                <h2 class="marca">Red Dragon</h2>
+                <p>Muy buen producto de excelente calidad y precio. Facil y comodo al momento de usarlo</p>
+                <div class="precio">
+					<input type="text" class="monto" id="monto-5" disabled value="$450" precio="$450">
+					<input type="number" class="cantidad" id="cantidad-5" value="1" min="1" onchange="nuevoMonto(5)">
+				</div>
+                <button class="btn-neon" onclick="quitarProducto(5)"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+                    <span id="span4"></span>Agregar al carro</button>
+            </div>
+        </div>
+
+        <div class="card" id="6">
+            <div class="cover">
+                <img src="images/6.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="articulo">Auriculares Inalámbrico</h2>
+                <h2 class="marca">Kolke</h2>
+                <p>Muy buen producto de excelente calidad y precio. Facil y comodo al momento de usarlo</p>
+                <div class="precio">
+					<input type="text" class="monto" id="monto-6" disabled value="$900" precio="$900">
+					<input type="number" class="cantidad" id="cantidad-6" value="1" min="1" onchange="nuevoMonto(6)">
+				</div>
+                <button class="btn-neon" onclick="quitarProducto(6)"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+                    <span id="span4"></span>Agregar al carro</button>
+            </div>
+        </div>
+    </div>
+    <div class="nuevo">
+        <button class="btn-agregar" onclick="abrirModal()"><span id="span1"></span><span id="span2"></span><span id="span3"></span>
+            <span id="span4"></span>Agregar un producto</button>
+    </div>
+    
+    <div id="myModal" class="modal">
+        
+            
+          
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="cerrarModal()">&times;</span>
+          <h1>Nuevo Producto</h1>
+          <input type="text" id="id_producto" placeholder="Identificador">
+          <input type="text" id="img_producto" placeholder="URL de la imagen">
+          <input type="text" id="titulo_producto" placeholder="Nombre">
+          <input type="text" id="marca_producto" placeholder="Marca">
+          <textarea id="descripcion_producto" placeholder="Escriba la descripción"></textarea>
+          <input type="text" id="monto_producto" placeholder=" Coloque la moneda seguida del monto Ej: $500">
+          <button class="btn-crearNuevo" onclick="cargarDatos()">Crear</button>
+        </div>
+      
+      </div>
+
+
+</body>
+</html>
